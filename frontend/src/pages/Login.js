@@ -15,7 +15,7 @@ const Login = () => {
 
     return(
         <form className="login" onSubmit={handleSubmit}>
-            <h3>Log in</h3>
+            <h3 style={{color:'#C21E56', textAlign:'center', fontSize:'25px'}}>Log in</h3>
             
             <label>Email</label>
             <input 
@@ -29,7 +29,9 @@ const Login = () => {
                 onChange={(e) => setPasssword(e.target.value)}
                 value={password}
             />
+            <div style={{ display: 'flex', justifyContent: 'center' }}>
             <button disabled={isLoading}>Log in</button>
+            </div>
             {error && <div className="error">{error}</div>}
         </form>
     )
